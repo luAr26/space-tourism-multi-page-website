@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-blue-900: hsl(230, 35%, 7%);
+    --color-blue-300: hsl(231, 77%, 90%);
+    --color-white: hsl(0, 0%, 100%);
+  }
+}
