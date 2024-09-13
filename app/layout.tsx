@@ -4,15 +4,21 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const barlowRegular = localFont({
+  src: "./fonts/Barlow-Regular.ttf",
+  variable: "--font-barlow-regular",
+  weight: "400",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const barlowCondensedRegular = localFont({
+  src: "./fonts/BarlowCondensed-Regular.ttf",
+  variable: "--font-barlow-condensed-regular",
+  weight: "400",
+});
+
+const bellefairRegular = localFont({
+  src: "./fonts/Bellefair-Regular.ttf",
+  variable: "--font-bellefair-regular",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -27,9 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${barlowRegular.variable} ${barlowCondensedRegular.variable} ${bellefairRegular.variable} antialiased`}
       >
         {children}
       </body>

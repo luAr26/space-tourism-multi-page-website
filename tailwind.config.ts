@@ -52,6 +52,11 @@ const config: Config = {
       50: "4px",
       25: "2px",
     },
+    fontFamily: {
+      barlow: ["var(--font-barlow-regular)"],
+      barlowCondensed: ["var(--font-barlow-condensed-regular)"],
+      bellefair: ["var(--font-bellefair-regular)"],
+    },
   },
   plugins: [],
 };
