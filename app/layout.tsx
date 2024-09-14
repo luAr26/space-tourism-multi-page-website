@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlowRegular.variable} ${barlowCondensedRegular.variable} ${bellefairRegular.variable} font-barlow antialiased`}
+        className={`${barlowRegular.variable} ${barlowCondensedRegular.variable} ${bellefairRegular.variable} bg-blue-900 font-barlow text-white antialiased`}
       >
         {children}
       </body>

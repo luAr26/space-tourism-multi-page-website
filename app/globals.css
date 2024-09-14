@@ -14,9 +14,26 @@
 
 @layer components {
   .btn {
-    @apply border-b pb-[13px];
+    @apply flex h-[144px] w-[144px] items-center justify-center rounded-full bg-white font-bellefair text-preset-9 uppercase text-blue-900 transition-all hover:ring-[88px] hover:ring-[rgba(255,255,255,0.1)] tablet:h-[272px] tablet:w-[272px] tablet:text-preset-4;
   }
-  .active {
-    @apply border-b-4 border-blue-900;
+
+  .main-menu-item {
+    @apply flex space-x-150 font-barlowCondensed text-preset-8 uppercase text-white hover:border-r-[3px] hover:border-r-[rgba(255,255,255,0.4)] active:border-r-white tablet:inline-flex tablet:border-b-[3px] tablet:border-[transparent] tablet:py-[37px] tablet:hover:border-b-[3px] tablet:hover:border-r-0 tablet:hover:border-b-[rgba(255,255,255,0.4)] tablet:active:border-b-white;
+  }
+
+  .tabs-btn {
+    @apply inline-block space-x-150 border-b-[3px] border-[transparent] pb-[10px] font-barlowCondensed text-preset-8 uppercase text-blue-300 transition-colors duration-500 hover:border-b-[rgba(255,255,255,0.4)] hover:text-white active:border-b-white active:text-white;
+  }
+
+  .tabs-btn--active {
+    @apply cursor-default border-b-white text-white hover:border-b-white;
+  }
+
+  .small-pagination-btn {
+    @apply block h-[10px] w-[10px] rounded-full bg-[rgba(255,255,255,.1744)] transition-colors duration-500 hover:bg-[rgba(255,255,255,.5001)] desktop:h-[15px] desktop:w-[15px];
+  }
+
+  .small-pagination-btn--active {
+    @apply cursor-default bg-white hover:bg-white;
   }
 }

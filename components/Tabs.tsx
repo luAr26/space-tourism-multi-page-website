@@ -43,7 +43,10 @@ const TabButtons = ({
       {data.map(({ name }, index) => (
         <button
           key={index}
-          className={clsx("btn", index === activeTab && "active")}
+          className={clsx(
+            "tabs-btn",
+            index === activeTab && "tabs-btn--active",
+          )}
           onClick={() => setActiveTab(index)}
         >
           {name}
@@ -61,7 +64,7 @@ const TabContent = ({
   activeTab: number;
 }) => {
   return (
-    <div className="flex w-[1000px] flex-col gap-[20px] rounded-[20px] p-500">
+    <div className="flex w-full flex-col gap-[20px] rounded-[20px] p-500">
       <div className="min-h-[250px] border p-[20px]">
         <motion.div
           className="relative h-[445px] w-[445px]"
