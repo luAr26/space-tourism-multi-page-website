@@ -11,3 +11,12 @@
     --color-white: hsl(0, 0%, 100%);
   }
 }
+
+@layer components {
+  .btn {
+    @apply border-b pb-[13px];
+  }
+  .active {
+    @apply border-b-4 border-blue-900;
+  }
+}
