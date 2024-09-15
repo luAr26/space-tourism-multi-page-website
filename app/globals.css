@@ -17,8 +17,36 @@
     @apply flex h-[144px] w-[144px] items-center justify-center rounded-full bg-white font-bellefair text-preset-9 uppercase text-blue-900 transition-all hover:ring-[88px] hover:ring-[rgba(255,255,255,0.1)] tablet:h-[272px] tablet:w-[272px] tablet:text-preset-4;
   }
 
-  .main-menu-item {
-    @apply flex space-x-150 font-barlowCondensed text-preset-8 uppercase text-white hover:border-r-[3px] hover:border-r-[rgba(255,255,255,0.4)] active:border-r-white tablet:inline-flex tablet:border-b-[3px] tablet:border-[transparent] tablet:py-[37px] tablet:hover:border-b-[3px] tablet:hover:border-r-0 tablet:hover:border-b-[rgba(255,255,255,0.4)] tablet:active:border-b-white;
+  .menu-item {
+    @apply relative inline-flex space-x-150 py-[38.5px] font-barlowCondensed text-preset-8 uppercase text-white;
+  }
+
+  .menu-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.5s;
+  }
+
+  .menu-item:hover::before {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .menu-item:active::before {
+    background-color: var(--color-white);
+  }
+
+  .menu-item--active {
+    @apply cursor-default;
+  }
+
+  .menu-item--active::before,
+  .menu-item--active:hover::before {
+    background-color: var(--color-white);
   }
 
   .tabs-btn {
@@ -35,5 +63,40 @@
 
   .small-pagination-btn--active {
     @apply cursor-default bg-white hover:bg-white;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper--home {
+  background-image: url("/assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) {
+  .wrapper--home {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+}
+
+/* DESKTOP  */
+@media only screen and (min-width: 1440px) {
+  .wrapper--home {
+    background-image: url("/assets/home/background-home-desktop.jpg");
+  }
+
+  .large-nav::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 32px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
   }
 }

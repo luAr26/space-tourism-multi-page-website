@@ -5,3 +5,8 @@ export type destinationsData = {
 }[];
 
 export type setActiveTab = (index: number) => void;
+
+export type MenuItemProps = {
+  children: React.ReactNode;
+  link: string;
+};
