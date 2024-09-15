@@ -10,3 +10,7 @@ export type MenuItemProps = {
   children: React.ReactNode;
   link: string;
 };
+
+export type MobileNavProps = {
+  setIsMenuOpen: (x: boolean) => void;
+};

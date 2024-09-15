@@ -49,6 +49,38 @@
     background-color: var(--color-white);
   }
 
+  .mobile-menu-item {
+    @apply relative inline-flex w-full space-x-150 font-barlowCondensed text-[1rem] uppercase tracking-[2px] text-white;
+  }
+
+  .mobile-menu-item::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    transition: background-color 0.5s;
+  }
+
+  .mobile-menu-item:hover::before {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .mobile-menu-item:active::before {
+    background-color: var(--color-white);
+  }
+
+  .mobile-menu-item--active {
+    @apply cursor-default;
+  }
+
+  .mobile-menu-item--active::before,
+  .mobile-menu-item--active:hover::before {
+    background-color: var(--color-white);
+  }
+
   .tabs-btn {
     @apply inline-block space-x-150 border-b-[3px] border-[transparent] pb-[10px] font-barlowCondensed text-preset-8 uppercase text-blue-300 transition-colors duration-500 hover:border-b-[rgba(255,255,255,0.4)] hover:text-white active:border-b-white active:text-white;
   }
@@ -81,6 +113,28 @@
 @media only screen and (min-width: 768px) {
   .wrapper--home {
     background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) and (max-height: 799px) {
+  .main > div > div {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .main > div > div > div > h1 {
+    font-size: 1rem;
+  }
+
+  .main > div > div > div > h1 > span {
+    font-size: 3.5rem;
+  }
+
+  .main > div > div > a {
+    margin-top: 32px;
+    width: 144px;
+    height: 144px;
+    font-size: 1.125rem;
   }
 }
 

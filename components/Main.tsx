@@ -3,5 +3,9 @@ export default function Main({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main className="h-[calc(100vh-96.19px)]">{children}</main>;
+  return (
+    <main className="main h-[calc(100vh-96.19px)] desktop:h-[calc(100vh-136.19px)]">
+      {children}
+    </main>
+  );
 }

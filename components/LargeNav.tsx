@@ -1,11 +1,6 @@
 import MenuItem from "@/components/MenuItem";
-
-const menuItems = [
-  { name: "Home", link: "/" },
-  { name: "Destination", link: "/destination" },
-  { name: "Crew", link: "/crew" },
-  { name: "Technology", link: "/technology" },
-];
+import data from "@/data/data.json";
+const menuItems = data.menuItems;
 
 const LargeNav = () => {
   return (
