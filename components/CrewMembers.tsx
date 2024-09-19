@@ -9,7 +9,7 @@ const CrewMembers = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const { name, images, role, bio } = crewData[activeSlide];
   return (
-    <div className="container tablet:h-full tablet:max-w-full tablet:py-500 desktop:py-600">
+    <div className="container tablet:h-full tablet:max-w-full tablet:py-500 desktop:h-auto desktop:max-w-[1440px] desktop:py-600">
       <h1 className="text-center font-barlowCondensed text-preset-8 uppercase tracking-[2.3px] tablet:text-left tablet:text-[1.25rem] desktop:text-preset-5">
         <span className="mr-300 font-bold text-[rgba(255,255,255,0.25)]">
           02
@@ -18,16 +18,16 @@ const CrewMembers = () => {
       </h1>
       <div className="flex flex-col items-center tablet:h-full tablet:justify-between desktop:mt-1600 desktop:flex-row desktop:space-x-[109px]">
         <div className="text-center desktop:text-left">
-          <h3 className="mt-800 font-bellefair text-[1.125rem] uppercase text-[rgba(255,255,255,0.5)] tablet:text-[1.5rem]">
+          <h3 className="mt-800 font-bellefair text-[1.125rem] uppercase text-[rgba(255,255,255,0.5)] tablet:text-[1.5rem] desktop:text-preset-4">
             {role}
           </h3>
-          <h2 className="font-bellefair text-[1.5rem] uppercase tablet:mt-[10px] tablet:text-[40px] desktop:mt-500 desktop:text-[96px]">
+          <h2 className="font-bellefair text-[1.5rem] uppercase tablet:mt-[10px] tablet:text-[40px] desktop:mt-200 desktop:text-preset-3">
             {name}
           </h2>
-          <p className="mt-300 max-w-[327px] text-[0.9375rem] leading-[1.8] text-blue-300 tablet:min-h-[130px] tablet:max-w-[572px] tablet:text-[1.125rem] desktop:min-h-[116px] desktop:max-w-[445px]">
+          <p className="mt-300 max-w-[327px] text-[0.9375rem] leading-[1.8] text-blue-300 tablet:min-h-[130px] tablet:max-w-[572px] tablet:text-[1.125rem] desktop:min-h-[130px] desktop:max-w-[540px]">
             {bio}
           </p>
-          <div className="mt-[43px] flex justify-center space-x-200 desktop:justify-start">
+          <div className="mt-[43px] flex justify-center space-x-200 desktop:mt-1600 desktop:justify-start">
             {crewData.map((member, index) => {
               const { name } = member;
               return (
@@ -63,7 +63,7 @@ const CrewMembers = () => {
             alt={name}
             fill
             priority
-            sizes="151px, (min-width: 768px) 514px, (min-width: 1440px) 480px"
+            sizes="151px, (min-width: 768px) 514px"
           />
         </div>
       </div>
