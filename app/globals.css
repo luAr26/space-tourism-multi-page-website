@@ -96,6 +96,14 @@
   .small-pagination-btn--active {
     @apply cursor-default bg-white hover:bg-white;
   }
+
+  .large-pagination-btn {
+    @apply inline-flex h-[40px] w-[40px] items-center justify-center rounded-full border border-[rgba(255,255,255,0.4)] bg-[transparent] font-bellefair text-[1.125rem] text-white transition-colors duration-500 hover:border-[white] hover:bg-white hover:text-blue-900 tablet:h-[56px] tablet:w-[56px] tablet:text-[1.5rem] desktop:h-[80px] desktop:w-[80px] desktop:text-[2rem];
+  }
+
+  .large-pagination-btn--active {
+    @apply cursor-default border-white bg-white text-blue-900 hover:bg-white;
+  }
 }
 
 .wrapper {
