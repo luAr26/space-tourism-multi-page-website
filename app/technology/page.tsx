@@ -1,7 +1,7 @@
-import Button from "@/components/Button";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 import MainNav from "@/components/MainNav";
+import Technology from "@/components/Technology";
 
 export default function Destination() {
   return (
@@ -10,7 +10,7 @@ export default function Destination() {
         <MainNav />
       </Header>
       <Main>
-        <Button />
+        <Technology />
       </Main>
     </div>
   );
